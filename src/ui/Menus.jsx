@@ -94,7 +94,6 @@ function Toggle({ id }) {
       x: window.innerWidth - rect.width - rect.x,
       y: rect.y + rect.height + 8,
     };
-    console.log("Toggle clicked:", { id, openId, newPosition });
     setPosition(newPosition);
 
     if (openId === "" || openId !== id) {
@@ -114,13 +113,6 @@ function Toggle({ id }) {
 function List({ id, children }) {
   const { openId, position, close } = useContext(MenusContext);
   const ref = useOutSideClick(close);
-
-  console.log("List render:", {
-    id,
-    openId,
-    position,
-    shouldShow: openId === id,
-  });
 
   if (openId !== id) return null;
 

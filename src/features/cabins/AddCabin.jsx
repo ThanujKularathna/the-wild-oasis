@@ -7,6 +7,7 @@ function AddCabin() {
     <div>
       <Modal>
         <Modal.Open opens="cabin-form">
+          {/*what does in here is can't  access the state  when button is create or not. therefore this open sub component job is to setting the state of the open the window we need. inside the open component button is cloning which is for accessing the state*/}
           <Button>Add new cabin</Button>
         </Modal.Open>
         <Modal.Window name="cabin-form">

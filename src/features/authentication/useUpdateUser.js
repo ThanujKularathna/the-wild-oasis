@@ -7,10 +7,10 @@ export function useUpdateUser() {
   const { mutate: updateUser, isPending: isUpdating } = useMutation({
     mutationFn: updateCurrentUser,
     onSuccess: (user) => {
-      toast.success("usera account updted");
-      // queryClient.setQueryData("user", user);
+      toast.success("usera account updated");
+      queryClient.setQueryData(["user"], user);
 
-      queryClient.invalidateQueries({ queryKey: ["user"] }); // invalid karanwa meken after that fetch the data again
+      // queryClient.invalidateQueries({ queryKey: ["user"] }); // invalid karanwa meken after that fetch the data again
     },
     onError: (error) => toast.error(error.message),
   });

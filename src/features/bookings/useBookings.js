@@ -47,6 +47,5 @@ export function useBookings() {
       queryFn: () => getBookings({ filter, sortBy, page: page - 1 }),
     });
 
-  console.log("bookings", bookings);
   return { isLoading, error, bookings, count };
 }

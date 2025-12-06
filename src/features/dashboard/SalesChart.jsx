@@ -43,8 +43,6 @@ function SalesChart({ bookings, numDays }) {
     };
   });
 
-  console.log(data);
-
   // const isDarkMode = true;
   const colors = isDarkMode
     ? {
